@@ -1,6 +1,26 @@
 const questions = [
   {
     "category": "Launch Profile",
+    "question": "Choose a name for your spaceship.",
+    "easy": "It can be any name you want.",
+    "deeper": "Why does that name fit your spaceship?",
+    "traits": [
+      "Creativity",
+      "Identity"
+    ]
+  },
+  {
+    "category": "Launch Profile",
+    "question": "What do you want your spaceship to look like?",
+    "easy": "Big, tiny, shiny, cozy, colorful, fast, or strange?",
+    "deeper": "What part would be most important to you?",
+    "traits": [
+      "Creativity",
+      "Choice"
+    ]
+  },
+  {
+    "category": "Launch Profile",
     "question": "What would your astronaut name be?",
     "easy": "You can use your real name or make one up.",
     "deeper": "How come you picked that name?",
@@ -17,26 +37,6 @@ const questions = [
     "traits": [
       "Identity",
       "Choice"
-    ]
-  },
-  {
-    "category": "Launch Profile",
-    "question": "What would your spaceship look like?",
-    "easy": "Big, tiny, shiny, cozy, fast, colorful, or strange?",
-    "deeper": "What would make it feel like yours?",
-    "traits": [
-      "Creativity",
-      "Identity"
-    ]
-  },
-  {
-    "category": "Launch Profile",
-    "question": "What would you name your spaceship?",
-    "easy": "Any name you want.",
-    "deeper": "What makes that a good name?",
-    "traits": [
-      "Creativity",
-      "Self-Expression"
     ]
   },
   {
@@ -1003,10 +1003,8 @@ const questions = [
 
 let state = {
   name: "Star Explorer",
-  avatar: "🧑‍🚀",
-  skin: "#f6c08d",
-  hair: "#3b2418",
-  suit: "blue",
+  avatar: "👩🏻‍🚀",
+  suit: "classic-white",
   crewName: "Robo",
   crewSkill: "Problem Solving",
   count: 0,
@@ -1022,9 +1020,256 @@ let state = {
   musicLevel: "dream"
 };
 
+const avatarOptions = [
+  {
+    "id": "f1",
+    "emoji": "👩🏻‍🚀",
+    "label": "Girl Astronaut"
+  },
+  {
+    "id": "f2",
+    "emoji": "👩🏼‍🚀",
+    "label": "Girl Astronaut"
+  },
+  {
+    "id": "f3",
+    "emoji": "👩🏽‍🚀",
+    "label": "Girl Astronaut"
+  },
+  {
+    "id": "f4",
+    "emoji": "👩🏾‍🚀",
+    "label": "Girl Astronaut"
+  },
+  {
+    "id": "f5",
+    "emoji": "👩🏿‍🚀",
+    "label": "Girl Astronaut"
+  },
+  {
+    "id": "m1",
+    "emoji": "👨🏻‍🚀",
+    "label": "Boy Astronaut"
+  },
+  {
+    "id": "m2",
+    "emoji": "👨🏼‍🚀",
+    "label": "Boy Astronaut"
+  },
+  {
+    "id": "m3",
+    "emoji": "👨🏽‍🚀",
+    "label": "Boy Astronaut"
+  },
+  {
+    "id": "m4",
+    "emoji": "👨🏾‍🚀",
+    "label": "Boy Astronaut"
+  },
+  {
+    "id": "m5",
+    "emoji": "👨🏿‍🚀",
+    "label": "Boy Astronaut"
+  },
+  {
+    "id": "n1",
+    "emoji": "🧑🏻‍🚀",
+    "label": "Astronaut"
+  },
+  {
+    "id": "n2",
+    "emoji": "🧑🏼‍🚀",
+    "label": "Astronaut"
+  },
+  {
+    "id": "n3",
+    "emoji": "🧑🏽‍🚀",
+    "label": "Astronaut"
+  },
+  {
+    "id": "n4",
+    "emoji": "🧑🏾‍🚀",
+    "label": "Astronaut"
+  },
+  {
+    "id": "n5",
+    "emoji": "🧑🏿‍🚀",
+    "label": "Astronaut"
+  },
+  {
+    "id": "fun1",
+    "emoji": "👽",
+    "label": "Alien"
+  },
+  {
+    "id": "fun2",
+    "emoji": "🤖",
+    "label": "Robot"
+  },
+  {
+    "id": "fun3",
+    "emoji": "👾",
+    "label": "Pixel Alien"
+  },
+  {
+    "id": "fun4",
+    "emoji": "🐱",
+    "label": "Space Cat"
+  },
+  {
+    "id": "fun5",
+    "emoji": "🐶",
+    "label": "Space Pup"
+  },
+  {
+    "id": "fun6",
+    "emoji": "🦊",
+    "label": "Cosmic Fox"
+  },
+  {
+    "id": "fun7",
+    "emoji": "🦄",
+    "label": "Galaxy Unicorn"
+  },
+  {
+    "id": "fun8",
+    "emoji": "🐸",
+    "label": "Moon Frog"
+  },
+  {
+    "id": "fun9",
+    "emoji": "🐼",
+    "label": "Star Panda"
+  }
+];
+
+const outfitOptions = [
+  {
+    "id": "classic-white",
+    "label": "Classic White",
+    "color": "#e3f2fd"
+  },
+  {
+    "id": "moon-silver",
+    "label": "Moon Silver",
+    "color": "#cfd8dc"
+  },
+  {
+    "id": "galaxy-blue",
+    "label": "Galaxy Blue",
+    "color": "#64b5f6"
+  },
+  {
+    "id": "comet-teal",
+    "label": "Comet Teal",
+    "color": "#4dd0e1"
+  },
+  {
+    "id": "rocket-red",
+    "label": "Rocket Red",
+    "color": "#ef5350"
+  },
+  {
+    "id": "mars-orange",
+    "label": "Mars Orange",
+    "color": "#ff9800"
+  },
+  {
+    "id": "sun-gold",
+    "label": "Sun Gold",
+    "color": "#ffd54f"
+  },
+  {
+    "id": "nebula-purple",
+    "label": "Nebula Purple",
+    "color": "#9575cd"
+  },
+  {
+    "id": "starlight-pink",
+    "label": "Starlight Pink",
+    "color": "#f48fb1"
+  },
+  {
+    "id": "forest-green",
+    "label": "Forest Green",
+    "color": "#81c784"
+  },
+  {
+    "id": "midnight-black",
+    "label": "Midnight Black",
+    "color": "#455a64"
+  },
+  {
+    "id": "rainbow-burst",
+    "label": "Rainbow Burst",
+    "color": "#ff7043"
+  },
+  {
+    "id": "ice-blue",
+    "label": "Ice Blue",
+    "color": "#90caf9"
+  },
+  {
+    "id": "planet-lime",
+    "label": "Planet Lime",
+    "color": "#aed581"
+  },
+  {
+    "id": "cosmic-coral",
+    "label": "Cosmic Coral",
+    "color": "#ff8a65"
+  },
+  {
+    "id": "aurora-mint",
+    "label": "Aurora Mint",
+    "color": "#80cbc4"
+  },
+  {
+    "id": "meteor-brown",
+    "label": "Meteor Brown",
+    "color": "#a1887f"
+  },
+  {
+    "id": "bubblegum",
+    "label": "Bubblegum",
+    "color": "#f06292"
+  },
+  {
+    "id": "lavender-glow",
+    "label": "Lavender Glow",
+    "color": "#b39ddb"
+  },
+  {
+    "id": "sunset-peach",
+    "label": "Sunset Peach",
+    "color": "#ffab91"
+  },
+  {
+    "id": "electric-neon",
+    "label": "Electric Neon",
+    "color": "#76ff03"
+  },
+  {
+    "id": "ocean-wave",
+    "label": "Ocean Wave",
+    "color": "#4fc3f7"
+  },
+  {
+    "id": "plasma-plum",
+    "label": "Plasma Plum",
+    "color": "#ab47bc"
+  },
+  {
+    "id": "solar-flare",
+    "label": "Solar Flare",
+    "color": "#ffca28"
+  }
+];
+
+
 const milestones = [
-  { count: 1, title: "Daily Discoveries", headline: "Young Dreamer Begins Astronaut Journey", body: "A brave student took the first step toward space today." },
-  { count: 10, title: "Daily Discoveries", headline: "Local Student Gets Into Space Camp!", body: "The first mission chapter revealed strengths, hopes, and personality." },
+  { count: 1, title: "Daily Discoveries", headline: "Young Dreamer Names a Spaceship", body: "A brave student began their mission by imagining the perfect spaceship." },
+  { count: 10, title: "Daily Discoveries", headline: "Local Student Gets Into Space Camp!", body: "The first mission chapter revealed hopes, personality, and early mission dreams." },
   { count: 25, title: "The Future Times", headline: "Young Explorer Builds a Space Crew", body: "The mission revealed important people, supports, and trusted helpers." },
   { count: 50, title: "Space Camp Times", headline: "Future Astronaut Shares Their World", body: "Halfway through the journey, Mission Control has learned more about home, school, feelings, and communication." },
   { count: 75, title: "Galaxy Gazette", headline: "Mission Prep Complete!", body: "The explorer has practiced naming feelings, asking for help, and finding safe ways through hard moments." },
@@ -1040,16 +1285,47 @@ const ranks = [
   [100, "Space Explorer"]
 ];
 
-document.querySelectorAll(".choice-row").forEach(row => {
-  row.querySelectorAll(".choice").forEach(btn => {
+
+function renderAvatarChoices() {
+  const grid = document.getElementById("avatarGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  avatarOptions.forEach((option, index) => {
+    const btn = document.createElement("button");
+    btn.className = "avatar-choice" + (option.emoji === state.avatar ? " active" : "");
+    btn.type = "button";
+    btn.innerHTML = `<div class="avatar-emoji">${option.emoji}</div>`;
     btn.addEventListener("click", () => {
-      row.querySelectorAll(".choice").forEach(b => b.classList.remove("active"));
+      state.avatar = option.emoji;
+      document.querySelectorAll(".avatar-choice").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      state[row.dataset.choice] = btn.dataset.value;
       updateAvatar();
     });
+    grid.appendChild(btn);
   });
-});
+}
+
+function renderOutfitChoices() {
+  const grid = document.getElementById("outfitGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  outfitOptions.forEach(option => {
+    const btn = document.createElement("button");
+    btn.className = "outfit-choice" + (option.id === state.suit ? " active" : "");
+    btn.type = "button";
+    btn.innerHTML = `<div class="outfit-swatch" style="background:${option.color}"></div><div class="outfit-label">${option.label}</div>`;
+    btn.addEventListener("click", () => {
+      state.suit = option.id;
+      document.querySelectorAll(".outfit-choice").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      updateAvatar();
+    });
+    grid.appendChild(btn);
+  });
+}
+
+renderAvatarChoices();
+renderOutfitChoices();
 
 document.querySelectorAll(".crew").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -1077,6 +1353,8 @@ document.querySelectorAll(".skill").forEach(btn => {
 
 document.getElementById("startBtn").addEventListener("click", () => {
   state.name = document.getElementById("astronautName").value || "Star Explorer";
+  audioStarted = true;
+  ensureAudio();
   document.getElementById("setupScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
   updateMusicLevel();
@@ -1088,8 +1366,6 @@ document.getElementById("startBtn").addEventListener("click", () => {
 function drawQuestion() {
   if (questions.length === 0) return;
 
-  // Move through the 100-question mission deck in order.
-  // This prevents random repeats during a full mission.
   const index = state.questionCursor % questions.length;
   state.current = questions[index];
   state.questionCursor++;
@@ -1153,6 +1429,9 @@ function updateAll() {
   updateAvatar();
   document.getElementById("displayName").textContent = state.name;
   document.getElementById("crewText").textContent = `Crew: ${state.crewName} · Skill: ${state.crewSkill}`;
+  const suit = outfitOptions.find(o => o.id === state.suit);
+  const suitText = document.getElementById("suitText");
+  if (suitText && suit) suitText.textContent = `Suit: ${suit.label}`;
   document.getElementById("questionCount").textContent = state.count;
   const pct = Math.min(state.count, 100);
   document.getElementById("progressFill").style.width = pct + "%";
@@ -1164,21 +1443,20 @@ function updateAll() {
   renderNews();
 }
 
+function suitColor(suitId) {
+  const suit = outfitOptions.find(o => o.id === suitId);
+  return suit ? suit.color : "#64b5f6";
+}
+
 function updateAvatar() {
   const avatar = document.getElementById("avatarFace");
+  const preview = document.getElementById("avatarPreview");
   if (!avatar) return;
   avatar.textContent = state.avatar;
   avatar.style.filter = `drop-shadow(0 0 12px ${suitColor(state.suit)})`;
-}
-
-function suitColor(suit) {
-  return {
-    blue:"#64b5f6",
-    orange:"#ff9800",
-    green:"#7ed957",
-    purple:"#b388ff",
-    silver:"#cfd8dc"
-  }[suit] || "#64b5f6";
+  if (preview) {
+    preview.style.boxShadow = `0 0 0 3px ${suitColor(state.suit)} inset, 0 0 24px rgba(0,0,0,.25)`;
+  }
 }
 
 function renderTraits() {
@@ -1253,7 +1531,7 @@ function showFinalArticle() {
   body.innerHTML = `
     <p><strong>By The Galaxy Gazette Space Desk</strong></p>
     <p>
-      After a 100-question journey filled with conversation, reflection, courage, and self-expression,
+      After a 100-question journey filled with conversation, imagination, courage, and self-expression,
       <strong>${escapeHtml(state.name)}</strong> officially reached space today. Traveling with
       <strong>${state.crewName}</strong>, whose special skill is <strong>${state.crewSkill}</strong>,
       this young explorer moved from a dream to launch day one answer at a time.
@@ -1322,73 +1600,70 @@ document.getElementById("copyArticleBtn").addEventListener("click", async () => 
 
 
 
+
 let audioCtx = null;
-let soundNodes = [];
+let masterGain = null;
+let musicNodes = [];
+let musicTimers = [];
 let audioStarted = false;
+let currentMusicLevel = null;
 
 const epicLevels = {
   dream: {
     name: "A Dream Begins",
-    base: 146,
-    chord: [1, 1.25, 1.5],
-    pulse: 1400,
-    sparkle: 2600,
-    drum: 0,
-    lead: 0.012
+    root: 110,
+    tempo: 1250,
+    drumEvery: 2,
+    intensity: 0.55,
+    melody: [0, 3, 5, 7, 10, 7, 5, 3]
   },
   camp: {
     name: "Space Camp",
-    base: 164,
-    chord: [1, 1.25, 1.5, 2],
-    pulse: 950,
-    sparkle: 2200,
-    drum: 0.018,
-    lead: 0.016
+    root: 123.47,
+    tempo: 1050,
+    drumEvery: 2,
+    intensity: 0.70,
+    melody: [0, 3, 7, 10, 12, 10, 7, 3]
   },
   academy: {
     name: "Astronaut Academy",
-    base: 196,
-    chord: [1, 1.2, 1.5, 2],
-    pulse: 720,
-    sparkle: 1800,
-    drum: 0.026,
-    lead: 0.02
+    root: 130.81,
+    tempo: 880,
+    drumEvery: 2,
+    intensity: 0.82,
+    melody: [0, 5, 7, 10, 12, 15, 12, 7]
   },
   training: {
     name: "Mission Training",
-    base: 220,
-    chord: [1, 1.25, 1.5, 2],
-    pulse: 520,
-    sparkle: 1500,
-    drum: 0.038,
-    lead: 0.024
+    root: 146.83,
+    tempo: 730,
+    drumEvery: 1,
+    intensity: 0.95,
+    melody: [0, 3, 7, 12, 15, 12, 10, 7]
   },
   launch: {
     name: "Launch Day",
-    base: 246,
-    chord: [1, 1.2, 1.5, 2],
-    pulse: 360,
-    sparkle: 1200,
-    drum: 0.052,
-    lead: 0.03
+    root: 164.81,
+    tempo: 560,
+    drumEvery: 1,
+    intensity: 1.10,
+    melody: [0, 7, 10, 12, 15, 19, 15, 12]
   },
   orbit: {
     name: "Orbit",
-    base: 174,
-    chord: [1, 1.333, 1.777, 2.25],
-    pulse: 1800,
-    sparkle: 2400,
-    drum: 0.008,
-    lead: 0.018
+    root: 98,
+    tempo: 1500,
+    drumEvery: 3,
+    intensity: 0.65,
+    melody: [0, 5, 7, 12, 14, 12, 7, 5]
   },
   complete: {
     name: "Mission Complete",
-    base: 261,
-    chord: [1, 1.25, 1.5, 2],
-    pulse: 2200,
-    sparkle: 1300,
-    drum: 0.012,
-    lead: 0.026
+    root: 130.81,
+    tempo: 900,
+    drumEvery: 1,
+    intensity: 1.05,
+    melody: [0, 7, 12, 15, 19, 24, 19, 15]
   }
 };
 
@@ -1403,152 +1678,190 @@ function updateMusicLevel() {
 
   if (state.musicLevel !== level) {
     state.musicLevel = level;
-    if (audioStarted) startSoundscape();
+    if (audioStarted && state.soundOn) startSoundscape(true);
+  }
+}
+
+function ensureAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (!masterGain) {
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = state.soundOn ? state.volume : 0;
+    masterGain.connect(audioCtx.destination);
+  }
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 }
 
 function stopSoundscape() {
-  soundNodes.forEach(node => {
+  musicTimers.forEach(timer => clearInterval(timer));
+  musicTimers = [];
+  musicNodes.forEach(node => {
     try {
       if (node.stop) node.stop();
       if (node.disconnect) node.disconnect();
     } catch(e) {}
   });
-  soundNodes = [];
+  musicNodes = [];
+  currentMusicLevel = null;
 }
 
-function startSoundscape() {
-  stopSoundscape();
-  audioStarted = true;
-  if (!state.soundOn) return;
+function midiToFreq(root, semitone) {
+  return root * Math.pow(2, semitone / 12);
+}
 
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+function createOsc(freq, type, gainValue, destination = masterGain) {
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = type;
+  osc.frequency.value = freq;
+  gain.gain.value = gainValue;
+  osc.connect(gain);
+  gain.connect(destination);
+  osc.start();
+  musicNodes.push(osc, gain);
+  return { osc, gain };
+}
+
+function playShortTone(freq, type, peak, duration, delay = 0, destination = masterGain) {
+  if (!audioCtx || !state.soundOn) return;
+  const now = audioCtx.currentTime + delay;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = type;
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(Math.max(peak, 0.0002), now + 0.025);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+  osc.connect(gain);
+  gain.connect(destination);
+  osc.start(now);
+  osc.stop(now + duration + 0.04);
+}
+
+function playDrum(strength = 1) {
+  if (!audioCtx || !state.soundOn) return;
+  const now = audioCtx.currentTime;
+
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = "sine";
+  osc.frequency.setValueAtTime(95, now);
+  osc.frequency.exponentialRampToValueAtTime(42, now + 0.22);
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.12 * strength, now + 0.018);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.42);
+  osc.connect(gain);
+  gain.connect(masterGain);
+  osc.start(now);
+  osc.stop(now + 0.45);
+
+  // A tiny noise burst makes the drum feel less like a beep.
+  const bufferSize = audioCtx.sampleRate * 0.18;
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) {
+    data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / bufferSize, 3);
   }
+  const noise = audioCtx.createBufferSource();
+  const noiseGain = audioCtx.createGain();
+  noiseGain.gain.setValueAtTime(0.035 * strength, now);
+  noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+  noise.connect(noiseGain);
+  noiseGain.connect(masterGain);
+  noise.start(now);
+  noise.stop(now + 0.2);
+}
+
+function startSoundscape(forceRestart = false) {
+  audioStarted = true;
+  ensureAudio();
+
+  if (!state.soundOn) {
+    if (masterGain) masterGain.gain.value = 0;
+    return;
+  }
+
+  if (masterGain) masterGain.gain.value = state.volume;
 
   const settings = epicLevels[state.musicLevel] || epicLevels.dream;
+  if (!forceRestart && currentMusicLevel === state.musicLevel && musicNodes.length > 0) return;
 
-  const master = audioCtx.createGain();
-  master.gain.value = state.volume;
-  master.connect(audioCtx.destination);
-  soundNodes.push(master);
+  stopSoundscape();
+  currentMusicLevel = state.musicLevel;
 
-  // Warm cinematic chord bed
-  settings.chord.forEach((mult, i) => {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = i % 2 === 0 ? "sine" : "triangle";
-    osc.frequency.value = settings.base * mult;
-    gain.gain.value = 0.018 + (i * 0.003);
-    osc.connect(gain);
-    gain.connect(master);
-    osc.start();
-    soundNodes.push(osc, gain);
+  const intensity = settings.intensity;
+  const root = settings.root;
+
+  // Low cello/war horn style drone
+  createOsc(root / 2, "sawtooth", 0.010 * intensity);
+  createOsc(root, "triangle", 0.012 * intensity);
+  createOsc(root * 1.5, "triangle", 0.006 * intensity);
+
+  // Heroic fifths / medieval-fantasy chord bed
+  [0, 7, 12, 15].forEach((semi, i) => {
+    createOsc(midiToFreq(root, semi), i % 2 ? "triangle" : "sawtooth", (0.006 + i * 0.0015) * intensity);
   });
 
-  // Adventure pulse
-  if (settings.pulse) {
-    const pulseTimer = setInterval(() => {
-      if (!audioCtx || !state.soundOn) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = "triangle";
-      osc.frequency.value = settings.base / 2;
-      gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.04, audioCtx.currentTime + 0.03);
-      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.28);
-      osc.connect(gain);
-      gain.connect(master);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.3);
-    }, settings.pulse);
-    soundNodes.push({ stop: () => clearInterval(pulseTimer), disconnect: () => {} });
-  }
+  let step = 0;
 
-  // Low heroic drum, stronger at later levels
-  if (settings.drum > 0) {
-    const drumTimer = setInterval(() => {
-      if (!audioCtx || !state.soundOn) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(90, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(45, audioCtx.currentTime + 0.18);
-      gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(settings.drum, audioCtx.currentTime + 0.02);
-      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.35);
-      osc.connect(gain);
-      gain.connect(master);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.38);
-    }, state.musicLevel === "launch" ? 720 : 1100);
-    soundNodes.push({ stop: () => clearInterval(drumTimer), disconnect: () => {} });
-  }
-
-  // Fantasy sparkle / harp-like notes
-  const sparkleTimer = setInterval(() => {
+  // Main pulsing rhythm and melody
+  const pulseTimer = setInterval(() => {
     if (!audioCtx || !state.soundOn) return;
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = "sine";
-    const scale = [1, 1.125, 1.25, 1.5, 1.667, 2, 2.25];
-    osc.frequency.value = settings.base * scale[Math.floor(Math.random() * scale.length)] * 2;
-    gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(settings.lead, audioCtx.currentTime + 0.02);
-    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.55);
-    osc.connect(gain);
-    gain.connect(master);
-    osc.start();
-    osc.stop(audioCtx.currentTime + 0.6);
-  }, settings.sparkle);
-  soundNodes.push({ stop: () => clearInterval(sparkleTimer), disconnect: () => {} });
+    const semitone = settings.melody[step % settings.melody.length];
+    const freq = midiToFreq(root * 2, semitone);
+    playShortTone(freq, "triangle", 0.035 * intensity, 0.34);
+    if (step % 2 === 0) {
+      playShortTone(freq / 2, "sawtooth", 0.025 * intensity, 0.42);
+    }
+    if (step % settings.drumEvery === 0) {
+      playDrum(intensity);
+    }
+    step++;
+  }, settings.tempo);
+
+  // Higher sparkle/choir-like accent
+  const accentTimer = setInterval(() => {
+    if (!audioCtx || !state.soundOn) return;
+    const pick = settings.melody[Math.floor(Math.random() * settings.melody.length)];
+    playShortTone(midiToFreq(root * 4, pick), "sine", 0.018 * intensity, 0.7);
+  }, Math.max(settings.tempo * 3, 1500));
+
+  // Slow horn swell
+  const hornTimer = setInterval(() => {
+    if (!audioCtx || !state.soundOn) return;
+    playShortTone(root, "sawtooth", 0.045 * intensity, 1.4);
+    playShortTone(root * 1.5, "triangle", 0.025 * intensity, 1.4, 0.08);
+  }, Math.max(settings.tempo * 6, 3200));
+
+  musicTimers.push(pulseTimer, accentTimer, hornTimer);
 }
 
 function playRewardSound() {
-  if (!audioCtx || !state.soundOn) return;
-  const master = audioCtx.createGain();
-  master.gain.value = Math.min(state.volume + 0.1, 0.38);
-  master.connect(audioCtx.destination);
-
+  ensureAudio();
+  if (!state.soundOn) return;
   const notes = state.musicLevel === "complete" ? [523, 659, 784, 1046] : [392, 523, 659];
   notes.forEach((freq, i) => {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = "triangle";
-    osc.frequency.value = freq;
-    gain.gain.setValueAtTime(0.0001, audioCtx.currentTime + i * 0.09);
-    gain.gain.exponentialRampToValueAtTime(0.055, audioCtx.currentTime + i * 0.09 + 0.02);
-    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + i * 0.09 + 0.28);
-    osc.connect(gain);
-    gain.connect(master);
-    osc.start(audioCtx.currentTime + i * 0.09);
-    osc.stop(audioCtx.currentTime + i * 0.09 + 0.32);
+    playShortTone(freq, "triangle", 0.08, 0.34, i * 0.09);
   });
 }
 
 function playChapterFanfare() {
-  if (!audioCtx || !state.soundOn) return;
-  const master = audioCtx.createGain();
-  master.gain.value = Math.min(state.volume + 0.12, 0.42);
-  master.connect(audioCtx.destination);
-
-  [392, 523, 659, 784, 1046].forEach((freq, i) => {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = "triangle";
-    osc.frequency.value = freq;
-    gain.gain.setValueAtTime(0.0001, audioCtx.currentTime + i * 0.13);
-    gain.gain.exponentialRampToValueAtTime(0.07, audioCtx.currentTime + i * 0.13 + 0.03);
-    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + i * 0.13 + 0.45);
-    osc.connect(gain);
-    gain.connect(master);
-    osc.start(audioCtx.currentTime + i * 0.13);
-    osc.stop(audioCtx.currentTime + i * 0.13 + 0.5);
+  ensureAudio();
+  if (!state.soundOn) return;
+  const notes = [196, 294, 392, 523, 659, 784];
+  notes.forEach((freq, i) => {
+    playShortTone(freq, i % 2 ? "triangle" : "sawtooth", 0.09, 0.55, i * 0.12);
   });
+  setTimeout(() => playDrum(1.35), 60);
+  setTimeout(() => playDrum(1.15), 420);
 }
 
-document.addEventListener("click", () => {
-  if (audioCtx && audioCtx.state === "suspended") audioCtx.resume();
+document.addEventListener("pointerdown", () => {
+  if (audioStarted) ensureAudio();
 }, { once: false });
 
 setTimeout(() => {
@@ -1559,14 +1872,20 @@ setTimeout(() => {
     soundToggle.addEventListener("click", () => {
       state.soundOn = !state.soundOn;
       soundToggle.textContent = state.soundOn ? "🔊 Epic Music On" : "🔇 Music Off";
-      startSoundscape();
+      ensureAudio();
+      if (state.soundOn) {
+        startSoundscape(true);
+      } else if (masterGain) {
+        masterGain.gain.value = 0;
+      }
     });
   }
 
   if (volumeSlider) {
     volumeSlider.addEventListener("input", () => {
       state.volume = Number(volumeSlider.value) / 100;
-      if (audioStarted) startSoundscape();
+      ensureAudio();
+      if (masterGain) masterGain.gain.value = state.soundOn ? state.volume : 0;
     });
   }
 }, 0);
