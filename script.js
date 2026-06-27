@@ -1,58 +1,68 @@
 const questions = [
   {
-    "category": "You, the Astronaut",
+    "category": "Launch Profile",
     "question": "What would your astronaut name be?",
     "easy": "You can use your real name or make one up.",
     "deeper": "How come you picked that name?",
-    "traits": [
-      "Identity",
-      "Confidence"
-    ]
-  },
-  {
-    "category": "You, the Astronaut",
-    "question": "What color would your spacesuit be?",
-    "easy": "Pick one color or lots of colors.",
-    "deeper": "What do you like about that color?",
     "traits": [
       "Identity",
       "Self-Expression"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What would your astronaut be really good at?",
-    "easy": "Helping, noticing, fixing, drawing, listening, making people laugh, or something else?",
-    "deeper": "When are you good at that in real life?",
+    "category": "Launch Profile",
+    "question": "What color would your spacesuit be?",
+    "easy": "Pick one color or lots of colors.",
+    "deeper": "What do you like about that color?",
     "traits": [
-      "Strength",
-      "Confidence"
+      "Identity",
+      "Choice"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What would your astronaut want help with?",
-    "easy": "Everyone needs help with something.",
-    "deeper": "Who is good at helping you?",
+    "category": "Launch Profile",
+    "question": "What would your spaceship look like?",
+    "easy": "Big, tiny, shiny, cozy, fast, colorful, or strange?",
+    "deeper": "What would make it feel like yours?",
     "traits": [
-      "Self-Awareness",
-      "Support"
+      "Creativity",
+      "Identity"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What would your astronaut be excited about?",
-    "easy": "The rocket, the stars, the Moon, aliens, floating, or something else?",
-    "deeper": "What makes you excited in real life?",
+    "category": "Launch Profile",
+    "question": "What would you name your spaceship?",
+    "easy": "Any name you want.",
+    "deeper": "What makes that a good name?",
+    "traits": [
+      "Creativity",
+      "Self-Expression"
+    ]
+  },
+  {
+    "category": "Launch Profile",
+    "question": "What would your first mission be?",
+    "easy": "Visit the Moon, find aliens, see Earth, explore a planet, or something else?",
+    "deeper": "Why would you choose that mission?",
+    "traits": [
+      "Interests",
+      "Motivation"
+    ]
+  },
+  {
+    "category": "Launch Profile",
+    "question": "What would your astronaut be most excited to see?",
+    "easy": "Stars, planets, aliens, Earth, the Moon, or something else?",
+    "deeper": "What kinds of things make you excited in real life?",
     "traits": [
       "Interests",
       "Joy"
     ]
   },
   {
-    "category": "You, the Astronaut",
+    "category": "Launch Profile",
     "question": "What would your astronaut feel nervous about?",
-    "easy": "The launch, the dark, being far away, loud sounds, or something else?",
+    "easy": "The launch, loud sounds, being far away, the dark, or something else?",
     "deeper": "What helps when you feel nervous?",
     "traits": [
       "Feelings",
@@ -60,47 +70,37 @@ const questions = [
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What is one thing your astronaut wants people to know about them?",
-    "easy": "It can be something you like, need, or are good at.",
+    "category": "Launch Profile",
+    "question": "What should Mission Control know before you blast off?",
+    "easy": "Something you like, need, dislike, or want people to understand.",
     "deeper": "Do people usually know that about you?",
     "traits": [
-      "Identity",
-      "Communication"
+      "Communication",
+      "Needs"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What would make your astronaut proud?",
-    "easy": "Trying, helping, learning, being brave, or finishing something?",
-    "deeper": "What makes you proud of yourself?",
+    "category": "Launch Profile",
+    "question": "What would be the hardest part of leaving Earth?",
+    "easy": "Missing people, pets, home, school, routines, or something else?",
+    "deeper": "What would help with that?",
     "traits": [
-      "Self-Esteem",
-      "Confidence"
+      "Attachment",
+      "Feelings"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What kind of astronaut would you want to be?",
-    "easy": "Kind, brave, careful, funny, calm, curious, or something else?",
-    "deeper": "Which one is most like you?",
+    "category": "Launch Profile",
+    "question": "What would make the rocket feel more like home?",
+    "easy": "A person, object, sound, smell, blanket, picture, or routine?",
+    "deeper": "Why would that help?",
     "traits": [
-      "Identity",
-      "Hope"
+      "Home",
+      "Safety"
     ]
   },
   {
-    "category": "You, the Astronaut",
-    "question": "What would your astronaut’s special power be?",
-    "easy": "Flying, helping, calming, fixing, noticing, or imagining?",
-    "deeper": "How could that power help your crew?",
-    "traits": [
-      "Strength",
-      "Empathy"
-    ]
-  },
-  {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "If your feelings were space weather today, what would the weather be?",
     "easy": "Sunny, stormy, cloudy, windy, calm, or mixed?",
     "deeper": "What would help the weather feel better?",
@@ -110,9 +110,9 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "What makes your astronaut happy?",
-    "easy": "People, places, games, pets, jokes, quiet, or something else?",
+    "easy": "People, pets, games, jokes, quiet, being outside, or something else?",
     "deeper": "How can people tell when you are happy?",
     "traits": [
       "Joy",
@@ -120,7 +120,7 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "What makes your astronaut worried?",
     "easy": "New things, loud things, mistakes, school, people, or something else?",
     "deeper": "What helps worry get smaller?",
@@ -130,7 +130,7 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "What makes your astronaut mad?",
     "easy": "Unfair things, being rushed, being teased, noise, or something else?",
     "deeper": "What helps mad feelings stay safe?",
@@ -140,7 +140,7 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "What makes your astronaut sad?",
     "easy": "Missing someone, being left out, getting in trouble, or something else?",
     "deeper": "What helps when sadness shows up?",
@@ -150,7 +150,17 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
+    "question": "What does your astronaut do when they feel silly?",
+    "easy": "Laugh, joke, move around, make sounds, dance, or something else?",
+    "deeper": "Who likes your silly side?",
+    "traits": [
+      "Joy",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Space Weather",
     "question": "What feeling is easy for your astronaut to show?",
     "easy": "Happy, mad, sad, worried, silly, excited, or calm?",
     "deeper": "How do people know you feel that way?",
@@ -160,8 +170,8 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
-    "question": "What feeling does your astronaut usually keep inside?",
+    "category": "Space Weather",
+    "question": "What feeling does your astronaut keep inside?",
     "easy": "A feeling people may not see right away.",
     "deeper": "What makes that feeling stay inside?",
     "traits": [
@@ -170,7 +180,7 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
+    "category": "Space Weather",
     "question": "What feeling do people sometimes miss in your astronaut?",
     "easy": "A feeling people do not always notice.",
     "deeper": "What would help them notice it?",
@@ -180,22 +190,12 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Feelings",
-    "question": "If your astronaut had a feeling button, what feeling would be on it today?",
-    "easy": "Pick one feeling or more than one.",
-    "deeper": "What made that feeling show up?",
+    "category": "Space Weather",
+    "question": "If your astronaut had a warning light, when would it turn on?",
+    "easy": "When things are too loud, too fast, too unfair, too scary, or too much?",
+    "deeper": "What should people do when the warning light turns on?",
     "traits": [
-      "Feelings",
-      "Insight"
-    ]
-  },
-  {
-    "category": "Mission Feelings",
-    "question": "What feeling is hard for your astronaut to talk about?",
-    "easy": "It can be any feeling.",
-    "deeper": "What would make it easier to talk about?",
-    "traits": [
-      "Feelings",
+      "Regulation",
       "Communication"
     ]
   },
@@ -291,9 +291,9 @@ const questions = [
   },
   {
     "category": "Your Crew",
-    "question": "If your crew had a team name, what would it be?",
-    "easy": "Make up a name for your group.",
-    "deeper": "Who belongs on that team?",
+    "question": "If your crew had a team cheer, what would it be?",
+    "easy": "Make up a cheer, saying, or sound.",
+    "deeper": "When would your crew use it?",
     "traits": [
       "Belonging",
       "Relationships"
@@ -481,22 +481,22 @@ const questions = [
   },
   {
     "category": "Mission Jobs",
-    "question": "If something went wrong on the ship, what would you be good at doing?",
-    "easy": "Getting help, staying calm, fixing, thinking, helping someone, or something else?",
-    "deeper": "When have you done something like that before?",
+    "question": "If something went wrong on the ship, what would you do first?",
+    "easy": "Get help, stay calm, check on people, hide, freeze, or try to fix it?",
+    "deeper": "What would help you do that?",
     "traits": [
-      "Strength",
-      "Resilience"
+      "Regulation",
+      "Coping"
     ]
   },
   {
     "category": "Mission Jobs",
-    "question": "What would your crew say you are good at?",
-    "easy": "Helping, trying, noticing, caring, making people laugh, or something else?",
-    "deeper": "Do you think they are right?",
+    "question": "What would be the easiest job for you on the spaceship?",
+    "easy": "Pick the job that sounds easiest for you.",
+    "deeper": "What makes that job easier than the others?",
     "traits": [
-      "Self-Esteem",
-      "Relationships"
+      "Self-Awareness",
+      "Confidence"
     ]
   },
   {
@@ -561,12 +561,12 @@ const questions = [
   },
   {
     "category": "Space School",
-    "question": "What is something you are good at in school?",
-    "easy": "A subject, helping, noticing, drawing, reading, or something else?",
-    "deeper": "Who notices that strength?",
+    "question": "What is one thing you like learning about?",
+    "easy": "It can be from school, home, games, videos, books, or anywhere.",
+    "deeper": "What makes it interesting to you?",
     "traits": [
-      "School",
-      "Self-Esteem"
+      "Interests",
+      "Curiosity"
     ]
   },
   {
@@ -912,7 +912,7 @@ const questions = [
   {
     "category": "Reaching Space",
     "question": "What did your astronaut learn about themselves?",
-    "easy": "Something they are good at, need, like, or feel.",
+    "easy": "Something they like, need, feel, or understand now.",
     "deeper": "Did anything surprise you?",
     "traits": [
       "Insight",
@@ -941,8 +941,8 @@ const questions = [
   },
   {
     "category": "Reaching Space",
-    "question": "What are you proud of?",
-    "easy": "Something from the mission or real life.",
+    "question": "What are you proud of from the mission?",
+    "easy": "Trying, answering, imagining, being honest, or something else?",
     "deeper": "Who would be proud of you too?",
     "traits": [
       "Self-Esteem",
@@ -971,12 +971,12 @@ const questions = [
   },
   {
     "category": "Reaching Space",
-    "question": "What would your crew say you are good at?",
-    "easy": "Helping, trying, noticing, caring, making people laugh, or something else?",
-    "deeper": "Do you believe that about yourself?",
+    "question": "When you look back at Earth, who or what do you think about?",
+    "easy": "A person, pet, place, memory, or feeling.",
+    "deeper": "Why does that come to mind?",
     "traits": [
-      "Self-Esteem",
-      "Relationships"
+      "Attachment",
+      "Reflection"
     ]
   },
   {
@@ -993,7 +993,7 @@ const questions = [
     "category": "Reaching Space",
     "question": "What should the newspaper say about your space journey?",
     "easy": "What headline should they write?",
-    "deeper": "What do you want people to remember about you?",
+    "deeper": "What do you want people to remember about the mission?",
     "traits": [
       "Identity",
       "Self-Esteem"
