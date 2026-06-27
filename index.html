@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KidTalk Space Journey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">KidTalk Cards</p>
+        <h1>Space Journey</h1>
+        <p>Answer questions. Build your astronaut. Travel from a dream to outer space.</p>
+      </div>
+      <div class="mission-counter">
+        <span id="questionCount">0</span><small>/100 questions</small>
+      </div>
+    </header>
+
+    <section id="setupScreen" class="setup-grid">
+
+      <div class="panel">
+        <h2>Build Your Astronaut</h2>
+
+        <label>Astronaut Name</label>
+        <input id="astronautName" placeholder="Star Explorer" maxlength="24" />
+
+        <label>Avatar</label>
+        <div class="choice-row" data-choice="avatar">
+          <button class="choice active" data-value="🧑‍🚀">🧑‍🚀</button>
+          <button class="choice" data-value="👩‍🚀">👩‍🚀</button>
+          <button class="choice" data-value="👨‍🚀">👨‍🚀</button>
+          <button class="choice" data-value="🤖">🤖</button>
+          <button class="choice" data-value="🛸">🛸</button>
+        </div>
+
+        <label>Skin Tone</label>
+        <div class="choice-row" data-choice="skin">
+          <button class="choice active skin s1" data-value="#f6c08d"></button>
+          <button class="choice skin s2" data-value="#d99a6c"></button>
+          <button class="choice skin s3" data-value="#a66a43"></button>
+          <button class="choice skin s4" data-value="#6f422a"></button>
+          <button class="choice skin s5" data-value="#f2d6b3"></button>
+        </div>
+
+        <label>Hair Color</label>
+        <div class="choice-row" data-choice="hair">
+          <button class="choice active hair h1" data-value="#3b2418"></button>
+          <button class="choice hair h2" data-value="#111111"></button>
+          <button class="choice hair h3" data-value="#d8a23d"></button>
+          <button class="choice hair h4" data-value="#8d4b2c"></button>
+          <button class="choice hair h5" data-value="#5e35b1"></button>
+        </div>
+
+        <label>Space Suit</label>
+        <div class="choice-row" data-choice="suit">
+          <button class="choice active" data-value="blue">Blue</button>
+          <button class="choice" data-value="orange">Orange</button>
+          <button class="choice" data-value="green">Green</button>
+          <button class="choice" data-value="purple">Purple</button>
+          <button class="choice" data-value="silver">Silver</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Choose Your Crew</h2>
+        <p class="small">Who is going with you?</p>
+        <div class="crew-grid">
+          <button class="crew active" data-name="Robo" data-skill="Problem Solving">🤖<strong>Robo</strong><span>Problem Solving</span></button>
+          <button class="crew" data-name="Luna" data-skill="Calm">🦄<strong>Luna</strong><span>Calm</span></button>
+          <button class="crew" data-name="Finn" data-skill="Curiosity">🦊<strong>Finn</strong><span>Curiosity</span></button>
+          <button class="crew" data-name="Theo" data-skill="Safety">🐢<strong>Theo</strong><span>Safety</span></button>
+          <button class="crew" data-name="Nova" data-skill="Courage">🐉<strong>Nova</strong><span>Courage</span></button>
+          <button class="crew" data-name="Olive" data-skill="Thinking">🦉<strong>Olive</strong><span>Thinking</span></button>
+        </div>
+
+        <h2>Choose Starting Skills</h2>
+        <p class="small">Pick up to three.</p>
+        <div class="skill-grid">
+          <button class="skill">Bravery</button>
+          <button class="skill">Curiosity</button>
+          <button class="skill">Kindness</button>
+          <button class="skill">Focus</button>
+          <button class="skill">Creativity</button>
+          <button class="skill">Teamwork</button>
+          <button class="skill">Calm</button>
+          <button class="skill">Independence</button>
+        </div>
+
+        <button id="startBtn" class="primary">Start Mission 🚀</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <section class="dashboard">
+        <div class="astronaut-card panel">
+          <div id="avatarPreview" class="avatar-preview">
+            <div class="helmet"></div>
+            <div id="avatarFace" class="avatar-face">🧑‍🚀</div>
+          </div>
+          <h2 id="displayName">Star Explorer</h2>
+          <p id="rankTitle">Dreamer</p>
+          <p id="crewText">Crew: Robo · Skill: Problem Solving</p>
+        </div>
+
+        <div class="journey panel">
+          <h2>Journey to Space</h2>
+          <div class="progress-line">
+            <div id="rocket" class="rocket">🚀</div>
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div class="milestones">
+            <span>Dream</span><span>Camp</span><span>Academy</span><span>Launch</span><span>Space</span>
+          </div>
+          <p id="missionStatus">Answer questions to move your rocket.</p>
+
+          <div class="music-controls">
+            <button id="soundToggle" class="secondary">🔊 Epic Music On</button>
+            <label class="volume-label">Volume <input id="volumeSlider" type="range" min="0" max="100" value="25"></label>
+          </div>
+
+        </div>
+
+        <div class="panel">
+          <h2>Top Skills</h2>
+          <div id="traitList" class="trait-list"></div>
+        </div>
+      </section>
+
+      <section class="question-zone">
+        <div class="card panel">
+          <div id="categoryTag" class="tag">Dreams</div>
+          <h2 id="questionText">Question appears here.</h2>
+          <p id="easyText">Easy prompt appears here.</p>
+
+          <textarea id="answerBox" placeholder="The therapist can type a short answer, theme, or note here..."></textarea>
+
+          <div class="button-row">
+            <button id="easyBtn" class="secondary">Easy Start 🌱</button>
+            <button id="deeperBtn" class="secondary">Go Deeper 🔍</button>
+            <button id="passBtn" class="secondary">Pass</button>
+            <button id="submitBtn" class="primary">Submit Answer ⭐</button>
+          </div>
+        </div>
+
+        <aside class="panel newspaper">
+          <h2>Acknowledgements</h2>
+          <div id="newsList"></div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+
+
+    <section id="chapterModal" class="chapter-modal hidden">
+      <div class="chapter-card">
+        <p class="chapter-kicker">Mission Milestone</p>
+        <h1 id="chapterTitle">Chapter Complete</h1>
+        <h2 id="chapterSubtitle">Achievement unlocked</h2>
+        <div id="chapterIcon" class="chapter-icon">🚀</div>
+        <p id="chapterMessage" class="chapter-message"></p>
+
+        <div class="chapter-summary">
+          <div>
+            <strong id="chapterQuestions">0</strong>
+            <span>Questions Answered</span>
+          </div>
+          <div>
+            <strong id="chapterRank">Dreamer</strong>
+            <span>Current Rank</span>
+          </div>
+          <div>
+            <strong id="chapterSkill">Curiosity</strong>
+            <span>Top Skill</span>
+          </div>
+        </div>
+
+        <div class="chapter-newspaper">
+          <p id="chapterPaperName">The Daily Galaxy</p>
+          <h3 id="chapterHeadline">Local Child Begins Space Journey</h3>
+        </div>
+
+        <button id="continueChapterBtn" class="primary">Go to Next Achievement 🚀</button>
+      </div>
+    </section>
+
+    <section id="finalArticleModal" class="final-modal hidden">
+      <div class="final-newspaper">
+        <button id="closeArticleBtn" class="close-btn">Close</button>
+        <p class="paper-name">The Galaxy Gazette</p>
+        <h1 id="finalHeadline">Historic Launch!</h1>
+        <p class="paper-subtitle">Special Mission Report</p>
+        <div id="finalArticleBody"></div>
+        <div class="button-row">
+          <button id="printArticleBtn" class="primary">Print Article 📰</button>
+          <button id="copyArticleBtn" class="secondary">Copy Article</button>
+        </div>
+      </div>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
