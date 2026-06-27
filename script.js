@@ -3,7 +3,7 @@ const questions = [
     "category": "You, the Astronaut",
     "question": "What would your astronaut name be?",
     "easy": "You can use your real name or make one up.",
-    "deeper": "Why did you pick that name?",
+    "deeper": "How come you picked that name?",
     "traits": [
       "Identity",
       "Confidence"
@@ -12,8 +12,8 @@ const questions = [
   {
     "category": "You, the Astronaut",
     "question": "What color would your spacesuit be?",
-    "easy": "Pick any color or pattern.",
-    "deeper": "What does that color say about you?",
+    "easy": "Pick one color or lots of colors.",
+    "deeper": "What do you like about that color?",
     "traits": [
       "Identity",
       "Self-Expression"
@@ -22,8 +22,8 @@ const questions = [
   {
     "category": "You, the Astronaut",
     "question": "What would your astronaut be really good at?",
-    "easy": "Brave, kind, careful, funny, smart, creative, or something else?",
-    "deeper": "When do you show that in real life?",
+    "easy": "Helping, noticing, fixing, drawing, listening, making people laugh, or something else?",
+    "deeper": "When are you good at that in real life?",
     "traits": [
       "Strength",
       "Confidence"
@@ -31,9 +31,9 @@ const questions = [
   },
   {
     "category": "You, the Astronaut",
-    "question": "What would your astronaut need help with?",
+    "question": "What would your astronaut want help with?",
     "easy": "Everyone needs help with something.",
-    "deeper": "Who is good at helping you with that?",
+    "deeper": "Who is good at helping you?",
     "traits": [
       "Self-Awareness",
       "Support"
@@ -41,9 +41,9 @@ const questions = [
   },
   {
     "category": "You, the Astronaut",
-    "question": "What would your astronaut be excited to see in space?",
-    "easy": "Stars, planets, aliens, Earth, the Moon, or something else?",
-    "deeper": "What kinds of things make you feel excited?",
+    "question": "What would your astronaut be excited about?",
+    "easy": "The rocket, the stars, the Moon, aliens, floating, or something else?",
+    "deeper": "What makes you excited in real life?",
     "traits": [
       "Interests",
       "Joy"
@@ -52,17 +52,17 @@ const questions = [
   {
     "category": "You, the Astronaut",
     "question": "What would your astronaut feel nervous about?",
-    "easy": "It can be a little nervous or a lot nervous.",
+    "easy": "The launch, the dark, being far away, loud sounds, or something else?",
     "deeper": "What helps when you feel nervous?",
     "traits": [
       "Feelings",
-      "Self-Awareness"
+      "Regulation"
     ]
   },
   {
     "category": "You, the Astronaut",
     "question": "What is one thing your astronaut wants people to know about them?",
-    "easy": "It can be something simple.",
+    "easy": "It can be something you like, need, or are good at.",
     "deeper": "Do people usually know that about you?",
     "traits": [
       "Identity",
@@ -82,8 +82,8 @@ const questions = [
   {
     "category": "You, the Astronaut",
     "question": "What kind of astronaut would you want to be?",
-    "easy": "Quiet, brave, funny, careful, kind, curious, or something else?",
-    "deeper": "What part of that is already like you?",
+    "easy": "Kind, brave, careful, funny, calm, curious, or something else?",
+    "deeper": "Which one is most like you?",
     "traits": [
       "Identity",
       "Hope"
@@ -91,9 +91,9 @@ const questions = [
   },
   {
     "category": "You, the Astronaut",
-    "question": "What would your astronaut’s superpower be?",
-    "easy": "Flying, fixing, calming, noticing, helping, imagining, or something else?",
-    "deeper": "How could that power help other people?",
+    "question": "What would your astronaut’s special power be?",
+    "easy": "Flying, helping, calming, fixing, noticing, or imagining?",
+    "deeper": "How could that power help your crew?",
     "traits": [
       "Strength",
       "Empathy"
@@ -112,7 +112,7 @@ const questions = [
   {
     "category": "Mission Feelings",
     "question": "What makes your astronaut happy?",
-    "easy": "People, places, games, animals, quiet, jokes, or something else?",
+    "easy": "People, places, games, pets, jokes, quiet, or something else?",
     "deeper": "How can people tell when you are happy?",
     "traits": [
       "Joy",
@@ -122,7 +122,7 @@ const questions = [
   {
     "category": "Mission Feelings",
     "question": "What makes your astronaut worried?",
-    "easy": "New things, loud things, mistakes, people, school, or something else?",
+    "easy": "New things, loud things, mistakes, school, people, or something else?",
     "deeper": "What helps worry get smaller?",
     "traits": [
       "Feelings",
@@ -132,8 +132,8 @@ const questions = [
   {
     "category": "Mission Feelings",
     "question": "What makes your astronaut mad?",
-    "easy": "Unfair things, being rushed, being teased, losing, noise, or something else?",
-    "deeper": "What helps anger stay safe?",
+    "easy": "Unfair things, being rushed, being teased, noise, or something else?",
+    "deeper": "What helps mad feelings stay safe?",
     "traits": [
       "Feelings",
       "Safety"
@@ -143,7 +143,7 @@ const questions = [
     "category": "Mission Feelings",
     "question": "What makes your astronaut sad?",
     "easy": "Missing someone, being left out, getting in trouble, or something else?",
-    "deeper": "What helps sadness feel less alone?",
+    "deeper": "What helps when sadness shows up?",
     "traits": [
       "Feelings",
       "Support"
@@ -161,9 +161,9 @@ const questions = [
   },
   {
     "category": "Mission Feelings",
-    "question": "What feeling is hard for your astronaut to show?",
-    "easy": "Some feelings hide inside.",
-    "deeper": "What makes that feeling hard to show?",
+    "question": "What feeling does your astronaut usually keep inside?",
+    "easy": "A feeling people may not see right away.",
+    "deeper": "What makes that feeling stay inside?",
     "traits": [
       "Feelings",
       "Self-Awareness"
@@ -183,7 +183,7 @@ const questions = [
     "category": "Mission Feelings",
     "question": "If your astronaut had a feeling button, what feeling would be on it today?",
     "easy": "Pick one feeling or more than one.",
-    "deeper": "What happened that made that feeling show up?",
+    "deeper": "What made that feeling show up?",
     "traits": [
       "Feelings",
       "Insight"
@@ -191,9 +191,9 @@ const questions = [
   },
   {
     "category": "Mission Feelings",
-    "question": "What is a feeling your astronaut wishes people understood better?",
+    "question": "What feeling is hard for your astronaut to talk about?",
     "easy": "It can be any feeling.",
-    "deeper": "What should people know about that feeling?",
+    "deeper": "What would make it easier to talk about?",
     "traits": [
       "Feelings",
       "Communication"
@@ -203,7 +203,7 @@ const questions = [
     "category": "Your Crew",
     "question": "Who would you bring to space with you?",
     "easy": "You can pick one person or more than one.",
-    "deeper": "Why would you bring them?",
+    "deeper": "How come you picked them?",
     "traits": [
       "Relationships",
       "Support"
@@ -232,7 +232,7 @@ const questions = [
   {
     "category": "Your Crew",
     "question": "Who would be good at listening to you?",
-    "easy": "Someone who lets you talk or be quiet.",
+    "easy": "Someone who lets you talk or lets you be quiet.",
     "deeper": "How can you tell they are listening?",
     "traits": [
       "Relationships",
@@ -322,7 +322,7 @@ const questions = [
   {
     "category": "Home Planet",
     "question": "Where do you go when you want quiet?",
-    "easy": "A room, corner, outside, blanket, or somewhere else?",
+    "easy": "A room, corner, blanket, outside, or somewhere else?",
     "deeper": "How do people know you need quiet?",
     "traits": [
       "Regulation",
@@ -356,7 +356,7 @@ const questions = [
     "deeper": "What would make that part easier?",
     "traits": [
       "Home",
-      "Problem Solving"
+      "Needs"
     ]
   },
   {
@@ -400,103 +400,103 @@ const questions = [
     ]
   },
   {
-    "category": "Mission Control",
-    "question": "How do you like people to talk to you?",
-    "easy": "Quietly, clearly, kindly, slowly, with jokes, or another way?",
-    "deeper": "What way of talking does not help?",
+    "category": "Mission Jobs",
+    "question": "Would you rather be the captain or have someone else be captain?",
+    "easy": "Captain or someone else?",
+    "deeper": "How come?",
     "traits": [
-      "Communication",
-      "Safety"
+      "Leadership",
+      "Trust"
     ]
   },
   {
-    "category": "Mission Control",
-    "question": "What kind of questions are easy to answer?",
-    "easy": "Yes/no, choices, silly questions, drawing questions, or something else?",
-    "deeper": "Why are those easier?",
+    "category": "Mission Jobs",
+    "question": "Who would you trust to be captain of your spaceship?",
+    "easy": "Pick someone you trust.",
+    "deeper": "What makes them a good captain?",
     "traits": [
-      "Communication",
-      "Self-Awareness"
+      "Trust",
+      "Relationships"
     ]
   },
   {
-    "category": "Mission Control",
-    "question": "What kind of questions are hard to answer?",
-    "easy": "Big questions, fast questions, feelings questions, or something else?",
-    "deeper": "What helps make them easier?",
-    "traits": [
-      "Communication",
-      "Support"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "How can people tell you are listening?",
-    "easy": "Eyes, body, words, nodding, quiet, or something else?",
-    "deeper": "What should people not assume about listening?",
-    "traits": [
-      "Communication",
-      "Understanding"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "How can people tell you need help?",
-    "easy": "Words, face, body, quiet, tears, anger, or another signal?",
-    "deeper": "What kind of help works best?",
-    "traits": [
-      "Communication",
-      "Support"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "What do you do when you do not want to talk?",
-    "easy": "Stay quiet, move, draw, hide, make sounds, or something else?",
-    "deeper": "What should other people do then?",
-    "traits": [
-      "Communication",
-      "Regulation"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "What helps you use your words?",
-    "easy": "Time, choices, quiet, pictures, a grown-up, or something else?",
-    "deeper": "When are words harder to find?",
-    "traits": [
-      "Communication",
-      "Support"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "What helps when words are hard?",
-    "easy": "Pointing, drawing, writing, choosing, taking a break, or showing?",
-    "deeper": "Who understands you when words are hard?",
-    "traits": [
-      "Communication",
-      "Support"
-    ]
-  },
-  {
-    "category": "Mission Control",
-    "question": "What do people misunderstand about you?",
-    "easy": "It can be something small or big.",
-    "deeper": "What do you wish they knew instead?",
+    "category": "Mission Jobs",
+    "question": "What would your job be on the spaceship?",
+    "easy": "Captain, helper, fixer, artist, explorer, listener, or something else?",
+    "deeper": "Why would that job fit you?",
     "traits": [
       "Identity",
-      "Communication"
+      "Strength"
     ]
   },
   {
-    "category": "Mission Control",
-    "question": "What do you wish grown-ups knew about kids?",
-    "easy": "Anything you want grown-ups to understand.",
-    "deeper": "What would grown-ups do differently if they knew that?",
+    "category": "Mission Jobs",
+    "question": "What job would you not want to have?",
+    "easy": "Pick any spaceship job you would not like.",
+    "deeper": "What would be hard about that job?",
     "traits": [
-      "Communication",
-      "Advocacy"
+      "Self-Awareness",
+      "Boundaries"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "Would you rather help people on the ship or explore new places?",
+    "easy": "Help people or explore?",
+    "deeper": "How come?",
+    "traits": [
+      "Values",
+      "Interests"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "Would you rather work by yourself or with a teammate?",
+    "easy": "By yourself or with someone?",
+    "deeper": "What feels better about that?",
+    "traits": [
+      "Independence",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "Would you rather make the rules for the ship or help everyone follow them?",
+    "easy": "Make the rules or help with the rules?",
+    "deeper": "How come?",
+    "traits": [
+      "Boundaries",
+      "Leadership"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "Would you rather be the brave one, the careful one, the funny one, or the helper?",
+    "easy": "Brave, careful, funny, or helper?",
+    "deeper": "Which one is most like you?",
+    "traits": [
+      "Identity",
+      "Self-Esteem"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "If something went wrong on the ship, what would you be good at doing?",
+    "easy": "Getting help, staying calm, fixing, thinking, helping someone, or something else?",
+    "deeper": "When have you done something like that before?",
+    "traits": [
+      "Strength",
+      "Resilience"
+    ]
+  },
+  {
+    "category": "Mission Jobs",
+    "question": "What would your crew say you are good at?",
+    "easy": "Helping, trying, noticing, caring, making people laugh, or something else?",
+    "deeper": "Do you think they are right?",
+    "traits": [
+      "Self-Esteem",
+      "Relationships"
     ]
   },
   {
@@ -562,7 +562,7 @@ const questions = [
   {
     "category": "Space School",
     "question": "What is something you are good at in school?",
-    "easy": "A subject, skill, helping, noticing, drawing, reading, or something else?",
+    "easy": "A subject, helping, noticing, drawing, reading, or something else?",
     "deeper": "Who notices that strength?",
     "traits": [
       "School",
@@ -653,7 +653,7 @@ const questions = [
     "category": "Friendship Planet",
     "question": "How do you know someone is being kind?",
     "easy": "What do they say or do?",
-    "deeper": "How does kindness feel in your body?",
+    "deeper": "How does kindness feel?",
     "traits": [
       "Friendship",
       "Safety"
@@ -751,7 +751,7 @@ const questions = [
   },
   {
     "category": "Big Feeling Asteroids",
-    "question": "What makes a hard feeling worse?",
+    "question": "What makes a hard feeling bigger?",
     "easy": "Being rushed, yelled at, touched, watched, noise, or something else?",
     "deeper": "What do you wish people did instead?",
     "traits": [
@@ -783,7 +783,7 @@ const questions = [
     "category": "Big Feeling Asteroids",
     "question": "Where do you feel worry in your body?",
     "easy": "Belly, chest, head, hands, legs, throat, or somewhere else?",
-    "deeper": "What does worry tell your body to do?",
+    "deeper": "What helps your body when worry shows up?",
     "traits": [
       "Body Clues",
       "Self-Awareness"
@@ -1089,7 +1089,7 @@ function drawQuestion() {
   if (questions.length === 0) return;
 
   // Move through the 100-question mission deck in order.
-  // This prevents repeats during a normal full mission.
+  // This prevents random repeats during a full mission.
   const index = state.questionCursor % questions.length;
   state.current = questions[index];
   state.questionCursor++;
