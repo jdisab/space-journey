@@ -1,77 +1,161 @@
 # KidTalk Space Journey
 
-A GitHub Pages-ready therapeutic question game for kids.
+**KidTalk Space Journey** is a browser-based therapeutic conversation game for children ages 10 and under. It is designed for counselors, therapists, school clinicians, and other helping professionals who want a playful, structured way to get to know a child.
 
-## New in this version
+The child becomes an astronaut moving through a 100-question space mission. Each question is simple, low-pressure, and space-themed, while still helping the clinician learn about the child’s thoughts, feelings, self-esteem, home life, relationships, communication style, regulation needs, interests, strengths, safety, and boundaries.
 
-After the client answers 100 questions, the app generates a final newspaper article from **The Galaxy Gazette** summarizing:
+This is not meant to be a diagnostic tool. It is a rapport-building and conversation-support tool.
 
-- The client’s astronaut name
-- Their crew companion
-- Their strongest character traits
-- Their 100-question journey
-- Selected typed answers from the mission log
-- A final mission-complete summary
+## Live Demo
 
-The article can be printed or copied.
+If GitHub Pages is enabled for this repository, the game can be played at:
 
-## Upload to GitHub
+```text
+https://jdisab.github.io/space-journey/
+```
 
-Upload these four files:
+## What the Game Does
 
-- index.html
-- style.css
-- script.js
-- README.md
+The child creates an astronaut character and begins a journey toward space. As the child answers questions, the mission progresses from early training to launch.
 
-Then enable GitHub Pages:
+The game includes:
 
-Settings > Pages > Deploy from branch > main > /root
+- 100 unique, non-repeating mission questions
+- Simple questions written for children 10 and under
+- Space-themed prompts inspired by the style of classic conversation games
+- Clinically relevant domains built into the question sequence
+- A visual progress bar showing the journey to space
+- Character and crew customization
+- Milestone “newspaper” achievements
+- Trait tracking based on the child’s answers
+- A final printable/copyable newspaper-style mission article
+- Optional browser-generated music and sound effects
 
+## Clinical Purpose
 
-## Music / Soundscape Themes
+The questions are designed to help a clinician understand the child through conversation rather than direct assessment.
 
-This version includes simple browser-generated soundscapes. No MP3 files are needed.
+The game explores:
 
-Children can choose:
-- Galactic Adventure
-- NASA Mission
-- Cosmic Arcade
-- Magical Galaxy
-- Robot Factory
-- Calm Cosmic Journey
-- Silent Mission
+- Thoughts and feelings
+- Self-esteem and identity
+- Home and family
+- Friendships and relationships
+- Communication preferences
+- Regulation and coping
+- Interests and strengths
+- Safety and boundaries
+- School experiences
+- Hopes and future thinking
 
-Sound begins only after the mission starts, because browsers require a user click before playing audio.
+The goal is for the therapist to leave with a stronger understanding of who the child is, what helps them feel safe, who matters to them, how they communicate, what they enjoy, what feels hard, and what strengths they already have.
 
+## Question Style
 
-## Chapter Complete Screens
+The questions are intentionally simple and concrete.
 
-This version adds achievement-style chapter-complete screens at:
+Examples include:
 
-- 10 questions: A Dream Begins
-- 25 questions: Space Camp Graduate
-- 50 questions: Astronaut Academy
-- 75 questions: Launch Training Complete
-- 90 questions: Entering Orbit
+```text
+Who would you bring to space with you?
 
-Each chapter screen includes a mission message, current rank, top skill, and newspaper-style headline.
+Who would help you feel safe on the rocket?
 
+What makes your astronaut worried?
 
-## Epic Dynamic Music
+What helps when words are hard?
 
-This version removes the child music picker. The app now uses one consistent epic fantasy-space soundtrack that changes automatically by journey stage:
+What makes someone a good friend?
 
-- Questions 0–9: A Dream Begins
-- 10–24: Space Camp
-- 25–49: Astronaut Academy
-- 50–74: Mission Training
-- 75–89: Launch Day
-- 90–99: Orbit
-- 100: Mission Complete
+What helps you feel safe?
 
-The music is generated in the browser, so no MP3 files are needed.
+What should the newspaper say about your space journey?
+```
 
+The game avoids abstract clinical language and avoids cognitive testing-style prompts such as sequencing or executive functioning tasks. The focus is on conversation, rapport, emotional awareness, relationships, communication, and safety.
 
-## Patch
-Fixed submit behavior so the next question appears after each submitted answer, except when a chapter-complete screen appears.
+## How to Use in Session
+
+A clinician can use the game in several ways:
+
+1. Let the child answer verbally while the therapist types brief notes.
+2. Let the child type their own answers when appropriate.
+3. Use the “easy” and “deeper” prompts as optional follow-ups.
+4. Skip or reframe any question that does not fit the child.
+5. Print or copy the final mission article as a child-friendly summary of the journey.
+
+The child does not need to complete all 100 questions in one session. The game can be used flexibly as a warm-up, rapport-building activity, intake support, or ongoing counseling tool.
+
+## Important Note for Clinicians
+
+This game is not a substitute for clinical judgment, informed consent, mandated reporting requirements, crisis assessment, or formal evaluation. It is a supportive conversation tool. Clinicians should adapt the prompts to the child’s developmental level, communication style, culture, family context, and clinical needs.
+
+## Files
+
+This project is a simple static website.
+
+The main files are:
+
+```text
+index.html
+style.css
+script.js
+README.md
+```
+
+No backend, database, or installation is required.
+
+## How to Run Locally
+
+Download or clone the repository, then open:
+
+```text
+index.html
+```
+
+in a web browser.
+
+Because this is a static site, it can also be hosted easily through GitHub Pages.
+
+## How to Deploy on GitHub Pages
+
+1. Upload the project files to the root of the repository.
+2. Go to the repository on GitHub.
+3. Click **Settings**.
+4. Click **Pages** in the left sidebar.
+5. Under **Source**, choose **Deploy from a branch**.
+6. Choose the **main** branch.
+7. Choose **/(root)** as the folder.
+8. Click **Save**.
+
+After GitHub finishes deploying, the site should be available at:
+
+```text
+https://jdisab.github.io/space-journey/
+```
+
+## Updating the Question Bank
+
+The questions are stored in `script.js` inside the `questions` array.
+
+Each question uses this format:
+
+```javascript
+{
+  category: "Mission Feelings",
+  question: "What makes your astronaut worried?",
+  easy: "New things, loud things, mistakes, people, school, or something else?",
+  deeper: "What helps worry get smaller?",
+  traits: ["Feelings", "Regulation"]
+}
+```
+
+To edit the game content, update the questions inside `script.js`, save the file, and upload the revised file to GitHub.
+
+## Design Philosophy
+
+KidTalk Space Journey is built around one idea:
+
+> A child should feel like they are going on an adventure, while the therapist is gently learning who they are.
+
+The space theme gives the child emotional distance and imagination. The question structure gives the therapist clinically useful information. The result is a game that supports connection, curiosity, and understanding.
