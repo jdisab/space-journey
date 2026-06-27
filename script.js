@@ -1,202 +1,1002 @@
 const questions = [
   {
-    "category": "Dreams",
-    "question": "Tell me about something you want that you do not currently have.",
-    "easy": "It could be a thing, a skill, a friendship, a feeling, or something that would make life easier.",
-    "deeper": "What would be different if you had it?",
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut name be?",
+    "easy": "You can use your real name or make one up.",
+    "deeper": "Why did you pick that name?",
     "traits": [
-      "Vision",
+      "Identity",
+      "Confidence"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What color would your spacesuit be?",
+    "easy": "Pick any color or pattern.",
+    "deeper": "What does that color say about you?",
+    "traits": [
+      "Identity",
+      "Self-Expression"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut be really good at?",
+    "easy": "Brave, kind, careful, funny, smart, creative, or something else?",
+    "deeper": "When do you show that in real life?",
+    "traits": [
+      "Strength",
+      "Confidence"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut need help with?",
+    "easy": "Everyone needs help with something.",
+    "deeper": "Who is good at helping you with that?",
+    "traits": [
+      "Self-Awareness",
+      "Support"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut be excited to see in space?",
+    "easy": "Stars, planets, aliens, Earth, the Moon, or something else?",
+    "deeper": "What kinds of things make you feel excited?",
+    "traits": [
+      "Interests",
+      "Joy"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut feel nervous about?",
+    "easy": "It can be a little nervous or a lot nervous.",
+    "deeper": "What helps when you feel nervous?",
+    "traits": [
+      "Feelings",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What is one thing your astronaut wants people to know about them?",
+    "easy": "It can be something simple.",
+    "deeper": "Do people usually know that about you?",
+    "traits": [
+      "Identity",
+      "Communication"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What would make your astronaut proud?",
+    "easy": "Trying, helping, learning, being brave, or finishing something?",
+    "deeper": "What makes you proud of yourself?",
+    "traits": [
+      "Self-Esteem",
+      "Confidence"
+    ]
+  },
+  {
+    "category": "You, the Astronaut",
+    "question": "What kind of astronaut would you want to be?",
+    "easy": "Quiet, brave, funny, careful, kind, curious, or something else?",
+    "deeper": "What part of that is already like you?",
+    "traits": [
+      "Identity",
       "Hope"
     ]
   },
   {
-    "category": "Feelings",
-    "question": "If your feeling today was a planet, what kind of planet would it be?",
-    "easy": "Hot, cold, stormy, quiet, colorful, rocky, icy, or full of life?",
-    "deeper": "What would help that planet feel safer?",
+    "category": "You, the Astronaut",
+    "question": "What would your astronaut’s superpower be?",
+    "easy": "Flying, fixing, calming, noticing, helping, imagining, or something else?",
+    "deeper": "How could that power help other people?",
     "traits": [
-      "Self-Awareness",
-      "Calm"
+      "Strength",
+      "Empathy"
     ]
   },
   {
-    "category": "Brag Cards",
-    "question": "Brag about something your brain does well.",
-    "easy": "Noticing, remembering, imagining, solving, creating, caring, or asking questions?",
-    "deeper": "Who should notice this more?",
+    "category": "Mission Feelings",
+    "question": "If your feelings were space weather today, what would the weather be?",
+    "easy": "Sunny, stormy, cloudy, windy, calm, or mixed?",
+    "deeper": "What would help the weather feel better?",
     "traits": [
-      "Confidence",
-      "Strength"
+      "Feelings",
+      "Self-Awareness"
     ]
   },
   {
-    "category": "Would You Rather",
-    "question": "Would you rather explore space alone or with a crew?",
-    "easy": "Alone or with a crew?",
-    "deeper": "What feels better about that choice?",
+    "category": "Mission Feelings",
+    "question": "What makes your astronaut happy?",
+    "easy": "People, places, games, animals, quiet, jokes, or something else?",
+    "deeper": "How can people tell when you are happy?",
     "traits": [
-      "Independence",
-      "Teamwork"
+      "Joy",
+      "Communication"
     ]
   },
   {
-    "category": "Sensory",
-    "question": "What would your perfect spaceship sound like?",
-    "easy": "Silent, humming, music, nature sounds, robot sounds, or something else?",
-    "deeper": "What sounds make it harder to think?",
+    "category": "Mission Feelings",
+    "question": "What makes your astronaut worried?",
+    "easy": "New things, loud things, mistakes, people, school, or something else?",
+    "deeper": "What helps worry get smaller?",
     "traits": [
-      "Sensory Wisdom",
-      "Focus"
+      "Feelings",
+      "Regulation"
     ]
   },
   {
-    "category": "School",
-    "question": "If school was astronaut training, what part would be hardest?",
-    "easy": "Listening, sitting, writing, friends, noise, tests, homework, or transitions?",
-    "deeper": "What tool would help you train better?",
+    "category": "Mission Feelings",
+    "question": "What makes your astronaut mad?",
+    "easy": "Unfair things, being rushed, being teased, losing, noise, or something else?",
+    "deeper": "What helps anger stay safe?",
     "traits": [
-      "Problem Solving",
-      "Perseverance"
-    ]
-  },
-  {
-    "category": "Home",
-    "question": "What is one place where your astronaut feels most calm?",
-    "easy": "Bedroom, couch, outside, with a pet, with a person, or somewhere imaginary?",
-    "deeper": "What makes that place feel calm?",
-    "traits": [
-      "Calm",
+      "Feelings",
       "Safety"
     ]
   },
   {
-    "category": "Friendship",
-    "question": "What kind of person would you want on your space crew?",
-    "easy": "Funny, calm, smart, kind, brave, quiet, creative, or loyal?",
-    "deeper": "What would make them a good teammate?",
+    "category": "Mission Feelings",
+    "question": "What makes your astronaut sad?",
+    "easy": "Missing someone, being left out, getting in trouble, or something else?",
+    "deeper": "What helps sadness feel less alone?",
     "traits": [
-      "Teamwork",
-      "Trust"
+      "Feelings",
+      "Support"
     ]
   },
   {
-    "category": "Communication",
-    "question": "How should your crew know when you need help?",
-    "easy": "Words, signal, card, drawing, quiet, movement, or asking a grown-up?",
-    "deeper": "What makes asking for help hard sometimes?",
+    "category": "Mission Feelings",
+    "question": "What feeling is easy for your astronaut to show?",
+    "easy": "Happy, mad, sad, worried, silly, excited, or calm?",
+    "deeper": "How do people know you feel that way?",
+    "traits": [
+      "Feelings",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Mission Feelings",
+    "question": "What feeling is hard for your astronaut to show?",
+    "easy": "Some feelings hide inside.",
+    "deeper": "What makes that feeling hard to show?",
+    "traits": [
+      "Feelings",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "Mission Feelings",
+    "question": "What feeling do people sometimes miss in your astronaut?",
+    "easy": "A feeling people do not always notice.",
+    "deeper": "What would help them notice it?",
+    "traits": [
+      "Communication",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "Mission Feelings",
+    "question": "If your astronaut had a feeling button, what feeling would be on it today?",
+    "easy": "Pick one feeling or more than one.",
+    "deeper": "What happened that made that feeling show up?",
+    "traits": [
+      "Feelings",
+      "Insight"
+    ]
+  },
+  {
+    "category": "Mission Feelings",
+    "question": "What is a feeling your astronaut wishes people understood better?",
+    "easy": "It can be any feeling.",
+    "deeper": "What should people know about that feeling?",
+    "traits": [
+      "Feelings",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would you bring to space with you?",
+    "easy": "You can pick one person or more than one.",
+    "deeper": "Why would you bring them?",
+    "traits": [
+      "Relationships",
+      "Support"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would help you feel safe on the rocket?",
+    "easy": "A family member, friend, teacher, pet, or someone else?",
+    "deeper": "What do they do that helps you feel safe?",
+    "traits": [
+      "Safety",
+      "Attachment"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would make you laugh in space?",
+    "easy": "Someone silly, funny, or playful.",
+    "deeper": "What do they do that makes you laugh?",
+    "traits": [
+      "Relationships",
+      "Joy"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would be good at listening to you?",
+    "easy": "Someone who lets you talk or be quiet.",
+    "deeper": "How can you tell they are listening?",
+    "traits": [
+      "Relationships",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would help if something went wrong?",
+    "easy": "Pick someone you trust.",
+    "deeper": "What makes them helpful?",
+    "traits": [
+      "Trust",
+      "Support"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who would you miss from Earth?",
+    "easy": "A person, pet, or group of people.",
+    "deeper": "What would you miss about them?",
+    "traits": [
+      "Attachment",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who knows you really well?",
+    "easy": "Someone who understands you.",
+    "deeper": "What do they understand about you?",
+    "traits": [
+      "Relationships",
+      "Identity"
+    ]
+  },
+  {
+    "category": "Your Crew",
+    "question": "Who is easy to talk to?",
+    "easy": "Someone at home, school, or somewhere else.",
+    "deeper": "What makes them easy to talk to?",
     "traits": [
       "Communication",
       "Support"
     ]
   },
   {
-    "category": "Coping",
-    "question": "Your rocket hits turbulence. What helps your astronaut stay steady?",
-    "easy": "Breathing, music, headphones, drawing, movement, space, water, or a trusted person?",
-    "deeper": "How can people help without making it worse?",
+    "category": "Your Crew",
+    "question": "Who would you want to sit next to on the rocket?",
+    "easy": "Pick someone who would feel good to sit beside.",
+    "deeper": "What would make sitting with them feel good?",
     "traits": [
-      "Calm",
-      "Resilience"
-    ]
-  },
-  {
-    "category": "Story Builder",
-    "question": "Tell a story about an astronaut who feels different from the rest of the crew.",
-    "easy": "What makes them different?",
-    "deeper": "What does the crew eventually understand about them?",
-    "traits": [
-      "Creativity",
-      "Identity"
-    ]
-  },
-  {
-    "category": "Masking",
-    "question": "When does your astronaut feel like they have to pretend?",
-    "easy": "School, groups, family, public places, online, or around certain people?",
-    "deeper": "What would help them feel more like themselves?",
-    "traits": [
-      "Authenticity",
-      "Courage"
-    ]
-  },
-  {
-    "category": "Body Clues",
-    "question": "What does your astronaut’s body do when it needs a break?",
-    "easy": "Quiet, moving, hiding, crying, yelling, freezing, laughing, or feeling tired?",
-    "deeper": "What should the crew notice first?",
-    "traits": [
-      "Self-Awareness",
+      "Relationships",
       "Safety"
     ]
   },
   {
-    "category": "Boundaries",
-    "question": "What rule should everyone follow on your spaceship?",
-    "easy": "Ask before touching, give space, use kind words, keep things quiet, or explain changes?",
-    "deeper": "Why does that rule matter?",
+    "category": "Your Crew",
+    "question": "If your crew had a team name, what would it be?",
+    "easy": "Make up a name for your group.",
+    "deeper": "Who belongs on that team?",
     "traits": [
-      "Boundaries",
-      "Leadership"
+      "Belonging",
+      "Relationships"
     ]
   },
   {
-    "category": "Future",
-    "question": "What kind of astronaut do you want to become?",
-    "easy": "Brave, curious, kind, calm, creative, strong, helpful, or independent?",
-    "deeper": "What part of that astronaut already exists in you?",
+    "category": "Home Planet",
+    "question": "What do you like most about home?",
+    "easy": "A person, pet, room, toy, routine, or feeling.",
+    "deeper": "What makes that part of home special?",
     "traits": [
-      "Vision",
-      "Confidence"
+      "Home",
+      "Safety"
     ]
   },
   {
-    "category": "Would You Rather",
-    "question": "Would you rather have a clear flight plan or freedom to explore?",
-    "easy": "Clear plan or freedom?",
-    "deeper": "Which one feels safer?",
+    "category": "Home Planet",
+    "question": "What is your favorite place at home?",
+    "easy": "Bedroom, couch, kitchen, outside, or somewhere else?",
+    "deeper": "What do you like about that place?",
     "traits": [
-      "Focus",
-      "Independence"
+      "Home",
+      "Regulation"
     ]
   },
   {
-    "category": "Brag Cards",
-    "question": "Tell me about a time you handled something hard.",
-    "easy": "It can be something small.",
-    "deeper": "What does that say about you?",
+    "category": "Home Planet",
+    "question": "Where do you go when you want quiet?",
+    "easy": "A room, corner, outside, blanket, or somewhere else?",
+    "deeper": "How do people know you need quiet?",
     "traits": [
-      "Resilience",
-      "Courage"
+      "Regulation",
+      "Communication"
     ]
   },
   {
-    "category": "Dreams",
-    "question": "If one thing in your life could get easier, what would you choose?",
-    "easy": "School, sleep, friends, talking, feelings, routines, or asking for help?",
-    "deeper": "What would be the first sign it was getting easier?",
+    "category": "Home Planet",
+    "question": "Who helps you at home?",
+    "easy": "A grown-up, sibling, pet, or someone else?",
+    "deeper": "What do they help with?",
     "traits": [
-      "Hope",
+      "Home",
+      "Support"
+    ]
+  },
+  {
+    "category": "Home Planet",
+    "question": "What is something fun you do at home?",
+    "easy": "A game, show, toy, activity, or routine.",
+    "deeper": "Who do you like doing it with?",
+    "traits": [
+      "Home",
+      "Joy"
+    ]
+  },
+  {
+    "category": "Home Planet",
+    "question": "What is something hard about home?",
+    "easy": "Noise, rules, sharing, bedtime, mornings, or something else?",
+    "deeper": "What would make that part easier?",
+    "traits": [
+      "Home",
       "Problem Solving"
     ]
   },
   {
-    "category": "Drawing",
-    "question": "Draw your astronaut’s safe place in space.",
-    "easy": "It can be a moon base, spaceship room, planet, cave, or star garden.",
-    "deeper": "Who is allowed to visit?",
+    "category": "Home Planet",
+    "question": "What do you wish happened more at home?",
+    "easy": "More play, quiet, help, hugs, talking, alone time, or something else?",
+    "deeper": "Who could help make that happen?",
     "traits": [
-      "Creativity",
+      "Home",
+      "Needs"
+    ]
+  },
+  {
+    "category": "Home Planet",
+    "question": "What makes home feel safe?",
+    "easy": "People, rules, routines, quiet, pets, or something else?",
+    "deeper": "How do you know when you feel safe?",
+    "traits": [
+      "Safety",
+      "Home"
+    ]
+  },
+  {
+    "category": "Home Planet",
+    "question": "What makes home feel loud or busy?",
+    "easy": "Sounds, people, lights, arguing, chores, or changes?",
+    "deeper": "What helps when home feels too busy?",
+    "traits": [
+      "Home",
+      "Regulation"
+    ]
+  },
+  {
+    "category": "Home Planet",
+    "question": "If your home was a planet, what kind of planet would it be?",
+    "easy": "Quiet, busy, funny, loud, cozy, stormy, or mixed?",
+    "deeper": "What would make that planet better for you?",
+    "traits": [
+      "Home",
+      "Feelings"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "How do you like people to talk to you?",
+    "easy": "Quietly, clearly, kindly, slowly, with jokes, or another way?",
+    "deeper": "What way of talking does not help?",
+    "traits": [
+      "Communication",
       "Safety"
     ]
   },
   {
-    "category": "Leadership",
-    "question": "Your crew is nervous before launch. What would you say to help them?",
-    "easy": "You can use kind words, a joke, a plan, or a calm reminder.",
-    "deeper": "What kind of leader would you be?",
+    "category": "Mission Control",
+    "question": "What kind of questions are easy to answer?",
+    "easy": "Yes/no, choices, silly questions, drawing questions, or something else?",
+    "deeper": "Why are those easier?",
     "traits": [
-      "Leadership",
-      "Kindness"
+      "Communication",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What kind of questions are hard to answer?",
+    "easy": "Big questions, fast questions, feelings questions, or something else?",
+    "deeper": "What helps make them easier?",
+    "traits": [
+      "Communication",
+      "Support"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "How can people tell you are listening?",
+    "easy": "Eyes, body, words, nodding, quiet, or something else?",
+    "deeper": "What should people not assume about listening?",
+    "traits": [
+      "Communication",
+      "Understanding"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "How can people tell you need help?",
+    "easy": "Words, face, body, quiet, tears, anger, or another signal?",
+    "deeper": "What kind of help works best?",
+    "traits": [
+      "Communication",
+      "Support"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What do you do when you do not want to talk?",
+    "easy": "Stay quiet, move, draw, hide, make sounds, or something else?",
+    "deeper": "What should other people do then?",
+    "traits": [
+      "Communication",
+      "Regulation"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What helps you use your words?",
+    "easy": "Time, choices, quiet, pictures, a grown-up, or something else?",
+    "deeper": "When are words harder to find?",
+    "traits": [
+      "Communication",
+      "Support"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What helps when words are hard?",
+    "easy": "Pointing, drawing, writing, choosing, taking a break, or showing?",
+    "deeper": "Who understands you when words are hard?",
+    "traits": [
+      "Communication",
+      "Support"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What do people misunderstand about you?",
+    "easy": "It can be something small or big.",
+    "deeper": "What do you wish they knew instead?",
+    "traits": [
+      "Identity",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Mission Control",
+    "question": "What do you wish grown-ups knew about kids?",
+    "easy": "Anything you want grown-ups to understand.",
+    "deeper": "What would grown-ups do differently if they knew that?",
+    "traits": [
+      "Communication",
+      "Advocacy"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What is your favorite part of school?",
+    "easy": "A subject, teacher, friend, lunch, recess, art, gym, or something else?",
+    "deeper": "What makes that part good?",
+    "traits": [
+      "School",
+      "Interests"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What part of school is hardest?",
+    "easy": "Work, friends, noise, rules, sitting, changes, or something else?",
+    "deeper": "What would make that part less hard?",
+    "traits": [
+      "School",
+      "Support"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "Who helps you at school?",
+    "easy": "A teacher, friend, counselor, nurse, aide, or someone else?",
+    "deeper": "How do they help?",
+    "traits": [
+      "School",
+      "Support"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What makes a teacher feel safe to talk to?",
+    "easy": "Kind voice, listening, patience, fairness, or something else?",
+    "deeper": "What makes a teacher harder to talk to?",
+    "traits": [
+      "School",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What makes school feel too loud or busy?",
+    "easy": "Hallways, cafeteria, classroom, bus, recess, or something else?",
+    "deeper": "What helps when school feels too much?",
+    "traits": [
+      "School",
+      "Regulation"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What helps you have a better school day?",
+    "easy": "A person, routine, break, quiet place, warning, or something else?",
+    "deeper": "Who at school should know that?",
+    "traits": [
+      "School",
+      "Support"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What is something you are good at in school?",
+    "easy": "A subject, skill, helping, noticing, drawing, reading, or something else?",
+    "deeper": "Who notices that strength?",
+    "traits": [
+      "School",
+      "Self-Esteem"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What is something you wish was easier at school?",
+    "easy": "Learning, asking, writing, friends, noise, rules, or something else?",
+    "deeper": "What kind of help would make it easier?",
+    "traits": [
+      "School",
+      "Needs"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "Where could your astronaut take a break at space school?",
+    "easy": "A quiet room, hallway, library, nurse, outside, or another place?",
+    "deeper": "How would your astronaut ask for that break?",
+    "traits": [
+      "Regulation",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Space School",
+    "question": "What would you change about school if you could?",
+    "easy": "A rule, room, schedule, sound, work, or something else?",
+    "deeper": "How would that change help kids?",
+    "traits": [
+      "School",
+      "Advocacy"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What makes someone a good friend?",
+    "easy": "Kind, funny, fair, calm, honest, playful, or something else?",
+    "deeper": "How do you know when someone is a good friend?",
+    "traits": [
+      "Friendship",
+      "Trust"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What makes someone hard to be around?",
+    "easy": "Bossy, loud, mean, unfair, confusing, or something else?",
+    "deeper": "What do you do when someone is hard to be around?",
+    "traits": [
+      "Boundaries",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What do you like to do with friends?",
+    "easy": "Play, talk, build, draw, games, sports, pretend, or something else?",
+    "deeper": "What makes that fun with someone else?",
+    "traits": [
+      "Friendship",
+      "Interests"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What is hard about making friends?",
+    "easy": "Starting, joining, talking, sharing, knowing what to say, or something else?",
+    "deeper": "What helps make it easier?",
+    "traits": [
+      "Friendship",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What is hard about keeping friends?",
+    "easy": "Arguments, sharing, teasing, changes, space, or something else?",
+    "deeper": "What helps friendships last?",
+    "traits": [
+      "Friendship",
+      "Repair"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "How do you know someone is being kind?",
+    "easy": "What do they say or do?",
+    "deeper": "How does kindness feel in your body?",
+    "traits": [
+      "Friendship",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "How do you know someone is not being kind?",
+    "easy": "What do they say or do?",
+    "deeper": "What should you do if someone is not being kind?",
+    "traits": [
+      "Safety",
+      "Boundaries"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What should a friend do when you are upset?",
+    "easy": "Listen, give space, get help, sit with you, or something else?",
+    "deeper": "What should they not do?",
+    "traits": [
+      "Friendship",
+      "Support"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "What kind of friend are you?",
+    "easy": "Silly, loyal, caring, quiet, playful, helpful, or something else?",
+    "deeper": "What would your friends say about you?",
+    "traits": [
+      "Self-Esteem",
+      "Friendship"
+    ]
+  },
+  {
+    "category": "Friendship Planet",
+    "question": "If a new kid joined your space crew, what could help them feel included?",
+    "easy": "Say hi, show them around, ask them to play, or something else?",
+    "deeper": "When have you felt included?",
+    "traits": [
+      "Empathy",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What do you do when you feel mad?",
+    "easy": "Yell, cry, move, hide, talk, squeeze, or something else?",
+    "deeper": "What helps mad feelings stay safe?",
+    "traits": [
+      "Regulation",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What do you do when you feel worried?",
+    "easy": "Ask questions, get quiet, move, think a lot, or something else?",
+    "deeper": "What helps worry calm down?",
+    "traits": [
+      "Regulation",
+      "Feelings"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What do you do when you feel sad?",
+    "easy": "Cry, get quiet, want a hug, want space, or something else?",
+    "deeper": "What helps sadness a little?",
+    "traits": [
+      "Regulation",
+      "Support"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What do you do when you feel too excited?",
+    "easy": "Jump, talk fast, laugh, run, make noise, or something else?",
+    "deeper": "What helps excitement stay okay for everyone?",
+    "traits": [
+      "Regulation",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What helps after a hard day?",
+    "easy": "Quiet, play, hugs, music, animals, shows, or something else?",
+    "deeper": "Who helps after a hard day?",
+    "traits": [
+      "Regulation",
+      "Support"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What makes a hard feeling worse?",
+    "easy": "Being rushed, yelled at, touched, watched, noise, or something else?",
+    "deeper": "What do you wish people did instead?",
+    "traits": [
+      "Regulation",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "What makes a hard feeling smaller?",
+    "easy": "Breathing, space, talking, drawing, moving, music, or something else?",
+    "deeper": "Which one works best for you?",
+    "traits": [
+      "Regulation",
+      "Coping"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "Who helps when feelings get big?",
+    "easy": "A grown-up, friend, sibling, pet, or someone else?",
+    "deeper": "What do they do that helps?",
+    "traits": [
+      "Support",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "Where do you feel worry in your body?",
+    "easy": "Belly, chest, head, hands, legs, throat, or somewhere else?",
+    "deeper": "What does worry tell your body to do?",
+    "traits": [
+      "Body Clues",
+      "Self-Awareness"
+    ]
+  },
+  {
+    "category": "Big Feeling Asteroids",
+    "question": "Where do you feel anger in your body?",
+    "easy": "Hands, face, chest, belly, legs, head, or somewhere else?",
+    "deeper": "What helps your body when anger shows up?",
+    "traits": [
+      "Body Clues",
+      "Regulation"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What helps you feel safe?",
+    "easy": "A person, place, object, rule, routine, or something else?",
+    "deeper": "How can people tell when you feel safe?",
+    "traits": [
+      "Safety",
+      "Regulation"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "Who helps you feel safe?",
+    "easy": "Someone at home, school, therapy, or somewhere else.",
+    "deeper": "What makes that person feel safe?",
+    "traits": [
+      "Safety",
+      "Attachment"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What does personal space mean to you?",
+    "easy": "How close is okay?",
+    "deeper": "How can you tell someone needs more space?",
+    "traits": [
+      "Boundaries",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What should people ask before touching your things?",
+    "easy": "What words should they use?",
+    "deeper": "How do you feel when people touch your things without asking?",
+    "traits": [
+      "Boundaries",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What should people ask before giving you a hug or high five?",
+    "easy": "What would feel respectful?",
+    "deeper": "How can you say no if you do not want that?",
+    "traits": [
+      "Consent",
+      "Boundaries"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What is a kind way to say no?",
+    "easy": "What words could your astronaut use?",
+    "deeper": "When is it hard to say no?",
+    "traits": [
+      "Boundaries",
+      "Communication"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What is a strong way to say stop?",
+    "easy": "What words or signal could your astronaut use?",
+    "deeper": "Who could help if someone does not stop?",
+    "traits": [
+      "Safety",
+      "Advocacy"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "Who could you tell if something felt wrong?",
+    "easy": "A grown-up, teacher, counselor, family member, or someone else?",
+    "deeper": "What makes it easier to tell?",
+    "traits": [
+      "Safety",
+      "Support"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What makes an adult safe to talk to?",
+    "easy": "They listen, believe you, stay calm, help, or something else?",
+    "deeper": "What makes an adult harder to talk to?",
+    "traits": [
+      "Trust",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Safety and Boundaries",
+    "question": "What rule would help everyone feel safe on the spaceship?",
+    "easy": "A rule about bodies, words, things, space, or asking first.",
+    "deeper": "Why does that rule matter?",
+    "traits": [
+      "Boundaries",
+      "Safety"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What helped your astronaut get this far?",
+    "easy": "People, practice, courage, kindness, calm, or something else?",
+    "deeper": "What helps you keep going in real life?",
+    "traits": [
+      "Resilience",
+      "Support"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What did your astronaut learn about themselves?",
+    "easy": "Something they are good at, need, like, or feel.",
+    "deeper": "Did anything surprise you?",
+    "traits": [
+      "Insight",
+      "Identity"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What was the best part of the mission?",
+    "easy": "Pick any part.",
+    "deeper": "What made that part the best?",
+    "traits": [
+      "Joy",
+      "Reflection"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What was the hardest part of the mission?",
+    "easy": "Pick any part.",
+    "deeper": "What helped you get through it?",
+    "traits": [
+      "Resilience",
+      "Coping"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What are you proud of?",
+    "easy": "Something from the mission or real life.",
+    "deeper": "Who would be proud of you too?",
+    "traits": [
+      "Self-Esteem",
+      "Confidence"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What do you want to keep practicing?",
+    "easy": "A feeling skill, friendship skill, school skill, or something else?",
+    "deeper": "Who can help you practice?",
+    "traits": [
+      "Growth",
+      "Support"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What do you hope gets easier?",
+    "easy": "Something at home, school, with feelings, or with people.",
+    "deeper": "What would be the first sign it was getting easier?",
+    "traits": [
+      "Hope",
+      "Needs"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What would your crew say you are good at?",
+    "easy": "Helping, trying, noticing, caring, making people laugh, or something else?",
+    "deeper": "Do you believe that about yourself?",
+    "traits": [
+      "Self-Esteem",
+      "Relationships"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What is your next big dream?",
+    "easy": "It can be big, small, real, or imaginary.",
+    "deeper": "What is one tiny step toward that dream?",
+    "traits": [
+      "Hope",
+      "Future"
+    ]
+  },
+  {
+    "category": "Reaching Space",
+    "question": "What should the newspaper say about your space journey?",
+    "easy": "What headline should they write?",
+    "deeper": "What do you want people to remember about you?",
+    "traits": [
+      "Identity",
+      "Self-Esteem"
     ]
   }
 ];
@@ -212,6 +1012,7 @@ let state = {
   count: 0,
   traits: {},
   current: null,
+  questionCursor: 0,
   newsUnlocked: [],
   answers: [],
   finalGenerated: false,
@@ -223,10 +1024,10 @@ let state = {
 
 const milestones = [
   { count: 1, title: "Daily Discoveries", headline: "Young Dreamer Begins Astronaut Journey", body: "A brave student took the first step toward space today." },
-  { count: 10, title: "Daily Discoveries", headline: "Local Student Gets Into Space Camp!", body: "Hard work, curiosity, and courage helped this explorer earn a spot." },
-  { count: 25, title: "The Future Times", headline: "Young Explorer Shows Outstanding Leadership", body: "The student helped the crew solve problems during training." },
-  { count: 50, title: "Space Camp Times", headline: "Future Astronaut Graduates Training Camp", body: "After dedication and growth, this explorer is ready for advanced missions." },
-  { count: 75, title: "Galaxy Gazette", headline: "Mission Prep Complete!", body: "The crew reports that this astronaut is nearly ready for launch." },
+  { count: 10, title: "Daily Discoveries", headline: "Local Student Gets Into Space Camp!", body: "The first mission chapter revealed strengths, hopes, and personality." },
+  { count: 25, title: "The Future Times", headline: "Young Explorer Builds a Space Crew", body: "The mission revealed important people, supports, and trusted helpers." },
+  { count: 50, title: "Space Camp Times", headline: "Future Astronaut Shares Their World", body: "Halfway through the journey, Mission Control has learned more about home, school, feelings, and communication." },
+  { count: 75, title: "Galaxy Gazette", headline: "Mission Prep Complete!", body: "The explorer has practiced naming feelings, asking for help, and finding safe ways through hard moments." },
   { count: 100, title: "Galaxy Gazette", headline: "Historic Launch! Student Reaches Space", body: "A dream becomes reality as our brave explorer launches into space." }
 ];
 
@@ -285,7 +1086,14 @@ document.getElementById("startBtn").addEventListener("click", () => {
 });
 
 function drawQuestion() {
-  state.current = questions[Math.floor(Math.random() * questions.length)];
+  if (questions.length === 0) return;
+
+  // Move through the 100-question mission deck in order.
+  // This prevents repeats during a normal full mission.
+  const index = state.questionCursor % questions.length;
+  state.current = questions[index];
+  state.questionCursor++;
+
   document.getElementById("categoryTag").textContent = state.current.category;
   document.getElementById("questionText").textContent = state.current.question;
   document.getElementById("easyText").textContent = state.current.easy;
@@ -445,7 +1253,7 @@ function showFinalArticle() {
   body.innerHTML = `
     <p><strong>By The Galaxy Gazette Space Desk</strong></p>
     <p>
-      After a 100-question journey filled with reflection, imagination, courage, and problem-solving,
+      After a 100-question journey filled with conversation, reflection, courage, and self-expression,
       <strong>${escapeHtml(state.name)}</strong> officially reached space today. Traveling with
       <strong>${state.crewName}</strong>, whose special skill is <strong>${state.crewSkill}</strong>,
       this young explorer moved from a dream to launch day one answer at a time.
@@ -473,8 +1281,8 @@ function showFinalArticle() {
     <p>
       Mission Control reports that ${escapeHtml(state.name)} showed growth across the journey,
       especially in the areas of ${topTraits.map(t=>t[0]).slice(0,3).join(", ") || "curiosity, courage, and self-expression"}.
-      The launch was not only a trip into space, but a story about learning how to understand oneself,
-      communicate needs, and keep moving forward.
+      The launch was not only a trip into space, but a story about getting to know the explorer’s feelings,
+      relationships, strengths, needs, and hopes.
     </p>
 
     <p><strong>Final Status:</strong> Mission Complete. The universe is open.</p>
